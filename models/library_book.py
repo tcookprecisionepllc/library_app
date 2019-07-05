@@ -20,7 +20,7 @@ class Book(models.Model):
             if not book.isbn:
                 raise Warning('Please provide an ISBN for %s' % book.name)
             if book.isbn and not book._check_isbn():
-                raise Warning('%s is in invalid ISBN' % book.isbn)
+                raise Warning('%s is an invalid ISBN' % book.isbn)
         return True
 
     _name = 'library.book'
