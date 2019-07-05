@@ -5,7 +5,11 @@
     <field name="model">library.book</field>
     <field name="arch" type="xml">
       <form string="Book">
-        <group>
+        <header>
+          <button name="button_check_isbn" type="object"
+            string="Check ISBN" />
+        </header>
+        <sheet>
           <field name="name" />
           <field name="author_ids" widget="many2many_tags" />
           <field name="publisher_id" />
@@ -13,7 +17,7 @@
           <field name="isbn" />
           <field name="active" />
           <field name="image" widget="image" />
-        </group>
+        </sheet>
       </form>
     </field>
   </record>
