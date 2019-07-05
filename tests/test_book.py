@@ -8,7 +8,7 @@ class TestBook(TransactionCase):
         self.env = self.env(user=user_admin)
         self.Book = self.env['library.book']
         self.book_ode = self.Book.create({
-            'name': 'Odoo Development Essentials'
+            'name': 'Odoo Development Essentials',
             'isbn': '879-1-78439-279-6'})
 
     def test_create(self):
